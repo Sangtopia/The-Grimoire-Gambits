@@ -2,7 +2,7 @@
 
 ## What idea(s) do you have for your final project?
 
-A 2D sprite RPG in a 3D open world, with a combat system based on card selection.
+2D sprite RPG in a 3D environment, with a combat system based on card selection. All are made in Unity with C#.
 
 ## If you plan to collaborate with one or two classmates, what are their names?
 
