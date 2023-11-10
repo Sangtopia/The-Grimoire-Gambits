@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -48,5 +49,20 @@ public class PlayerController : MonoBehaviour
         bool isWalking = moveDir.magnitude > 0.1f;
         animator.SetBool("IsWalking", isWalking);
         animator.SetBool("IsRunning", currentSpeed == runningSpeed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the player collides with an enemy (replace "Goblin" with the actual tag)
+        if (other.CompareTag("Goblin"))
+        {
+            SceneManager.LoadScene("Goblin Combat");
+        }
+        // Check for other enemy types
+        else if (other.CompareTag("Skeleton"))
+        {
+            SceneManager.LoadScene("Skeleton Combat");
+        }
+        // Add more conditions for other enemy types as needed
     }
 }
