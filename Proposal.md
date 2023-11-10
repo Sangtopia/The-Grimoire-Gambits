@@ -19,6 +19,7 @@ NONE
 ## If planning to collaborate with 1 or 2 classmates for the final project, list their names, email addresses, and the names of their assigned TAs below.
 
 Emmanuel San, emsa627@gmail.com (tur51376@temple.edu), Elmira Talebianaraki
+Khai Thach, thachqkhai@gmail.com (tuq43307@temple.edu), Xinwen Zhang
 
 ## In the world of software, most everything takes longer to implement than you expect. And so it's not uncommon to accomplish less in a fixed amount of time than you hope.
 
