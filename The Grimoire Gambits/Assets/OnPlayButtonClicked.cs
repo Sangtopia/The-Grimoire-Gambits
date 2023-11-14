@@ -10,4 +10,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("First Cut Scene", LoadSceneMode.Single);
     }
+
+    // Add this method to handle the "Quit" button click
+    public void OnQuitButtonClicked()
+    {
+        // This will quit the application. Note that this may not work in the Unity Editor.
+        // In the Unity Editor, you might need to stop the play mode manually.
+        Application.Quit();
+    }
 }
