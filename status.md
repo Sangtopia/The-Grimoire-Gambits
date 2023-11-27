@@ -1,8 +1,8 @@
 # Status Report
 
-#### Emmanuel San, Khai Thach
+#### Name
 
-TODO
+Emmanuel San, Khai Thach
 
 #### Your section leader's name
 
@@ -10,7 +10,7 @@ TODO
 
 #### Project title
 
-TODO
+The Grimoire Gambits
 
 ***
 
@@ -18,11 +18,11 @@ Short answers for the below questions suffice. If you want to alter your plan fo
 
 #### What have you done for your project so far?
 
-TODO
+We have added the sprites for Player with animations, added music and a menu.
 
 #### What have you not done for your project yet?
 
-TODO
+Turn-based gameplay, map building and Polishing
 
 #### What problems, if any, have you encountered?
 
