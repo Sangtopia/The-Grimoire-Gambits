@@ -7,6 +7,7 @@ Emmanuel San, Khai Thach
 #### Your section leader's name
 
 Xinwen Zhang - Khai's Section Leader
+
 Elmira Talebianaraki - Emmanuel's Section Leader
 
 #### Project title
