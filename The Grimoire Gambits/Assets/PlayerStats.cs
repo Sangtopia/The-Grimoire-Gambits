@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     public int level = 1;
     public float experienceMultiplier = 1.5f;  // Multiplier for the next level's experience requirement
 
+
     private void Start()
     {
         // Initial calculation of experience needed for the next level
@@ -31,7 +32,7 @@ public class PlayerStats : MonoBehaviour
         // Check if the player is out of health
         if (health <= 0)
         {
-            // Implement game over logic or any other actions
+            SceneManager.LoadScene("Game Over Scene"); 
         }
     }
 
@@ -66,4 +67,5 @@ public class PlayerStats : MonoBehaviour
 
         return nextLevelExperience;
     }
+
 }
