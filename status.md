@@ -28,4 +28,4 @@ Turn-based gameplay, map building and Polishing
 
 #### What problems, if any, have you encountered?
 
-N/A
+I (Emmanuel) keep crashing lol
