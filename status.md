@@ -6,7 +6,8 @@ Emmanuel San, Khai Thach
 
 #### Your section leader's name
 
-TODO
+Xinwen Zhang - Khai's Section Leader
+Elmira Talebianaraki - Emmanuel's Section Leader
 
 #### Project title
 
@@ -26,4 +27,4 @@ Turn-based gameplay, map building and Polishing
 
 #### What problems, if any, have you encountered?
 
-TODO
+N/A
