@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 9d03366a8b4add14d87d63ad06c3f295, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d25ea6d3d3ac649a4e205db2c18ba0, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d03366a8b4add14d87d63ad06c3f295, type: 3}
       propertyPath: m_Name
       value: TinyBuilding01
