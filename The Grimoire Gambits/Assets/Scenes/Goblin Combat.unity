@@ -1362,7 +1362,7 @@ Animator:
   m_GameObject: {fileID: 1234219244}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 856be803fa81f5f4d91d0daf49518408, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1399,7 +1399,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!135 &1234219248
 SphereCollider:
@@ -1502,6 +1502,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af12178d31c2ed4f9eeda3f0b192f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  chaseRange: 5
+  groundDist: 0.625
+  wanderRange: 5
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rb: {fileID: 1234219247}
+  sr: {fileID: 1234219249}
+  animator: {fileID: 1234219246}
+  player: {fileID: 1878504395}
 --- !u!1 &1418988257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,6 +2208,11 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &1878504395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1049713280932052449, guid: afc7bef7cb917d3478995f0bb2154fbe, type: 3}
+  m_PrefabInstance: {fileID: 1063134573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938451890
 GameObject:
   m_ObjectHideFlags: 0
