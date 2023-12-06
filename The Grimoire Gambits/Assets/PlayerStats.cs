@@ -1,14 +1,34 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerStats : MonoBehaviour
+public class CharacterStats : MonoBehaviour
 {
+    // Common attributes for both Player and Unit
+    public string characterName;
+    public int level;
+
+    // Player-specific attributes
     public int health = 100;
     public int defense = 10;
     public int attack = 20;
     public int experience = 0;
-    public int level = 1;
     public float experienceMultiplier = 1.5f;
+
+    // Unit-specific attributes
+    public int damage;
+
+    public int maxHP;
+    private int currentHP;
+
+    // Use properties to provide controlled access to fields
+    public int CurrentHP
+    {
+        get { return currentHP; }
+        private set { currentHP = Mathf.Clamp(value, 0, maxHP); }
+    }
+
+    // Use properties for public fields whenever applicable
+    public bool IsAlive => CurrentHP > 0;
 
     private int experienceToNextLevel;
 
@@ -19,9 +39,9 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        CurrentHP -= damage;
 
-        if (health <= 0)
+        if (!IsAlive)
         {
             SceneManager.LoadScene("Game Over Scene");
         }
