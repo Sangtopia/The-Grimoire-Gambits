@@ -12,10 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/First Cut Scene.unity
     guid: d3e059635a36d8f4483d4ba53e1628a1
   - enabled: 1
-    path: Assets/Scenes/Starting Map.unity
+    path: Assets/Scenes/Villiage.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Goblin Combat.unity
-    guid: 8da3f99109cb8f04f915a062b8508c75
+    path: Assets/Scenes/Withered Forest.unity
+    guid: 919caa0ec0b26714cadb8c79d95ef0aa
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: 023ecca4a31baee418aeb9438338b6f3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
