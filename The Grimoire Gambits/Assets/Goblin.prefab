@@ -135,7 +135,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &7302956449169581647
@@ -167,13 +167,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5076359437003485218}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9af12178d31c2ed4f9eeda3f0b192f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  chaseRange: 5
+  chaseRange: 0
   groundDist: 0.4
   wanderRange: 5
   terrainLayer:
@@ -182,7 +182,7 @@ MonoBehaviour:
   rb: {fileID: 6182513353367242093}
   sr: {fileID: 8887579381885838196}
   animator: {fileID: 7302956449169581647}
-  player: {fileID: 1049713280932052449, guid: afc7bef7cb917d3478995f0bb2154fbe, type: 3}
+  player: {fileID: 2645322542191305705}
 --- !u!114 &9057016233565870520
 MonoBehaviour:
   m_ObjectHideFlags: 0

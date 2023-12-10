@@ -13,7 +13,7 @@ public class LevelMove_Ref : MonoBehaviour
 
         if(other.tag == "Player")
         {
-            print("Switching SCene to" + sceneBuildIndex);
+            print("Switching Scene to" + sceneBuildIndex);
 
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }

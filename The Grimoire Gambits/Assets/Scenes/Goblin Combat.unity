@@ -198,14 +198,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 982593869}
   m_FillRect: {fileID: 2019385778}
   m_HandleRect: {fileID: 982593868}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
@@ -697,8 +697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -2.5363, y: 0}
+  m_SizeDelta: {x: -14.928, y: -9.139}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &413466551
 GameObject:
@@ -921,8 +921,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 413.99994, y: 0}
-  m_SizeDelta: {x: 709.26, y: 27.7}
+  m_AnchoredPosition: {x: 269.44675, y: -0.4531}
+  m_SizeDelta: {x: 420.1536, y: 72.1082}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &478823439
 GameObject:
@@ -1389,8 +1389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582628663
 MonoBehaviour:
@@ -1908,7 +1908,6 @@ MonoBehaviour:
   nameText: {fileID: 532972306}
   levelText: {fileID: 1484823153}
   hpSlider: {fileID: 1411170397}
-  maxHP: 100
 --- !u!1 &930771268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,14 +2351,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1675759382}
   m_FillRect: {fileID: 582628662}
   m_HandleRect: {fileID: 1675759381}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3062,8 +3061,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -0.00018310547, y: 0.000034093857}
+  m_SizeDelta: {x: 0.00057507, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2019385779
 MonoBehaviour:
@@ -3136,8 +3135,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -2.5886, y: -0.00002002716}
+  m_SizeDelta: {x: -14.823, y: -8.556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2114952686
 GameObject:
@@ -3232,7 +3231,6 @@ MonoBehaviour:
   nameText: {fileID: 478823441}
   levelText: {fileID: 972504335}
   hpSlider: {fileID: 76056774}
-  maxHP: 100
 --- !u!1 &2129135394
 GameObject:
   m_ObjectHideFlags: 0

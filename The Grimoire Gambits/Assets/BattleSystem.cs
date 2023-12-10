@@ -48,50 +48,57 @@ public class BattleSystem : MonoBehaviour
         PlayerTurn();
     }
 
+
     IEnumerator PlayerAttack()
+{
+    int damageDealt = playerUnit.damage; // Use the attack damage
+
+    bool isDead = enemyUnit.TakeDamage(damageDealt);
+
+    // Update the HP display using the modified SetHP method
+    enemyHUD.SetHP(enemyUnit.CurrentHP, enemyUnit.maxHP);
+
+    dialogueText.text = "The attack is successful, dealing " + damageDealt + " damage!"; // Provide feedback on the damage dealt
+
+    yield return new WaitForSeconds(2f);
+
+    if (isDead)
     {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-
-        enemyHUD.SetHP(enemyUnit.CurrentHP);
-        dialogueText.text = "The attack is successful!";
-
-        yield return new WaitForSeconds(2f);
-
-        if (isDead)
-        {
-            state = BattleState.WON;
-            EndBattle();
-        }
-        else
-        {
-            state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
-        }
+        state = BattleState.WON;
+        EndBattle();
     }
-
-    IEnumerator EnemyTurn()
+    else
     {
-        dialogueText.text = enemyUnit.unitName + " attacks!";
-
-        yield return new WaitForSeconds(1f);
-
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
-
-        playerHUD.SetHP(playerUnit.CurrentHP);
-
-        yield return new WaitForSeconds(1f);
-
-        if (isDead)
-        {
-            state = BattleState.LOST;
-            EndBattle();
-        }
-        else
-        {
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
-        }
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
+}
+
+// Repeat the same modification for the enemy's turn
+IEnumerator EnemyTurn()
+{
+    dialogueText.text = enemyUnit.unitName + " attacks!";
+
+    yield return new WaitForSeconds(1f);
+
+    bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+
+    // Update the HP display using the modified SetHP method
+    playerHUD.SetHP(playerUnit.CurrentHP, playerUnit.maxHP);
+
+    yield return new WaitForSeconds(1f);
+
+    if (isDead)
+    {
+        state = BattleState.LOST;
+        EndBattle();
+    }
+    else
+    {
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
+}
 
     void EndBattle()
     {
@@ -111,17 +118,20 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator PlayerHeal()
-    {
-        playerUnit.Heal(5);
+{
+    playerUnit.Heal(5);
 
-        playerHUD.SetHP(playerUnit.CurrentHP);
-        dialogueText.text = "You feel renewed strength!";
+    // Update the HP display using the modified SetHP method
+    playerHUD.SetHP(playerUnit.CurrentHP, playerUnit.maxHP);
 
-        yield return new WaitForSeconds(2f);
+    dialogueText.text = "You feel renewed strength!";
 
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
-    }
+    yield return new WaitForSeconds(2f);
+
+    state = BattleState.ENEMYTURN;
+    StartCoroutine(EnemyTurn());
+}
+
 
     public void OnAttackButton()
     {

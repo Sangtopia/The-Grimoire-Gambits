@@ -21,14 +21,19 @@ public class Unit : MonoBehaviour
     // Use properties for public fields whenever applicable
     public bool IsAlive => CurrentHP > 0;
 
-    public bool TakeDamage(int damageAmount)
-    {
-        // Subtract damage directly from current HP
-        CurrentHP -= damageAmount;
 
-        // Use the property to check if the unit is still alive
-        return IsAlive;
+    public bool TakeDamage(int damageAmount)
+{
+    CurrentHP -= damageAmount;
+
+    if (CurrentHP <= 0)
+    {
+        CurrentHP = 0; // Ensure health doesn't go below 0
+        return false;  // The unit is not alive
     }
+
+    return true; // The unit is still alive
+}
 
     public void Heal(int amount)
     {
