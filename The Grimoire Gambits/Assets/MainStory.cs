@@ -8,6 +8,6 @@ public class MainStory : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable() // Corrected method name
     {
-        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+        SceneManager.LoadScene("Villiage", LoadSceneMode.Single);
     }
 }
