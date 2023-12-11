@@ -24,13 +24,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Cut Scene.unity
     guid: c4a3b3f25248e114c880135ba80fe7fc
   - enabled: 1
-    path: Assets/Scenes/GoblinScene.unity
+    path: Assets/Scenes/Village Battle.unity
     guid: 8da3f99109cb8f04f915a062b8508c75
   - enabled: 1
-    path: Assets/Scenes/MushroomScene.unity
+    path: Assets/Scenes/Forest Battle.unity
     guid: a459d547f9f594040bfdcfaf46f84b3c
   - enabled: 1
-    path: Assets/Scenes/SkeltonScene.unity
+    path: Assets/Scenes/Dungeon Battle.unity
     guid: fe5976c9bb5985845af9fc009bded76f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
