@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer sr; // Reference to the SpriteRenderer component
     public Animator animator; // Reference to the Animator component
 
+
+    public bool canMove = true; 
+
+
+
     void Start()
     {
         // Get references to components
@@ -22,7 +27,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        RaycastHit hit;
+        if (canMove)
+        {
+
+                    RaycastHit hit;
         Vector3 castPos = transform.position;
         castPos.y += 1;
 
@@ -33,36 +41,23 @@ public class PlayerController : MonoBehaviour
             transform.position = movePos;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        Vector3 moveDir = new Vector3(x, 0, y).normalized;
+            float x = Input.GetAxis("Horizontal");
+            float y = Input.GetAxis("Vertical");
+            Vector3 moveDir = new Vector3(x, 0, y).normalized;
 
-        float currentSpeed = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) ? runningSpeed : walkingSpeed;
+            float currentSpeed = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) ? runningSpeed : walkingSpeed;
 
-        rb.velocity = moveDir * currentSpeed;
+            rb.velocity = moveDir * currentSpeed;
 
-        if (x != 0)
-        {
-            sr.flipX = x < 0;
+            if (x != 0)
+            {
+                sr.flipX = x < 0;
+            }
+
+            bool isWalking = moveDir.magnitude > 0.1f;
+            animator.SetBool("IsWalking", isWalking);
+            animator.SetBool("IsRunning", currentSpeed == runningSpeed);
         }
-
-        bool isWalking = moveDir.magnitude > 0.1f;
-        animator.SetBool("IsWalking", isWalking);
-        animator.SetBool("IsRunning", currentSpeed == runningSpeed);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Check if the player collides with an enemy (replace "Goblin" with the actual tag)
-        if (other.CompareTag("Goblin"))
-        {
-            SceneManager.LoadScene("Goblin Combat");
-        }
-        // Check for other enemy types
-        else if (other.CompareTag("Skeleton"))
-        {
-            SceneManager.LoadScene("Skeleton Combat");
-        }
-        // Add more conditions for other enemy types as needed
-    }
 }

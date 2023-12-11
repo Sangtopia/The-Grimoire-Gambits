@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 1087400414003916562}
   - component: {fileID: 5441924621968372710}
   - component: {fileID: 4937850886008638149}
+  - component: {fileID: 7010825762234205299}
   - component: {fileID: 7623111944127683184}
   - component: {fileID: 7681209488518528609}
   - component: {fileID: 8946532902896888489}
   m_Layer: 0
   m_Name: Mushroom
-  m_TagString: Untagged
+  m_TagString: Mushroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +130,18 @@ MonoBehaviour:
   sr: {fileID: 1087400414003916562}
   animator: {fileID: 7623111944127683184}
   player: {fileID: 1049713280932052449, guid: afc7bef7cb917d3478995f0bb2154fbe, type: 3}
+--- !u!114 &7010825762234205299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216483939466320841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e1e94fc31811a43a09452803e32e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7623111944127683184
 Animator:
   serializedVersion: 7
@@ -166,7 +179,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

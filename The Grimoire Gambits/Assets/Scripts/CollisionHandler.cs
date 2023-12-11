@@ -3,21 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        // Check if the collision involves the Player
-        if (collision.gameObject.CompareTag("Player"))
+        // Check if the collider belongs to the Player
+        if (other.CompareTag("Player"))
         {
             // Check the tag of the other collider and switch scenes accordingly
-            if (collision.gameObject.CompareTag("Goblin"))
+            if (gameObject.CompareTag("Goblin"))
             {
                 SwitchScene("GoblinScene");
             }
-            else if (collision.gameObject.CompareTag("Skeleton"))
+            else if (gameObject.CompareTag("Skeleton"))
             {
                 SwitchScene("SkeletonScene");
             }
-            else if (collision.gameObject.CompareTag("Mushroom"))
+            else if (gameObject.CompareTag("Mushroom"))
             {
                 SwitchScene("MushroomScene");
             }

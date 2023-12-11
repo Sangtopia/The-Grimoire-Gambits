@@ -22,18 +22,22 @@ public class CombatSystems : MonoBehaviour
 
     protected BattleState state;
 
-    [SerializeField] private Slider playerHealth = null;
-    [SerializeField] private Slider enemyHealth = null;
+    [SerializeField] private Slider playerHealthSlider = null;
+    [SerializeField] private Slider enemyHealthSlider = null;
     [SerializeField] private Button attackBtn = null;
     [SerializeField] private Button healBtn = null;
 
     private bool isPlayerTurn = true;
+    private PlayerController playerController; // Reference to PlayerController script
 
     // Start is called before the first frame update
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+
+        // Get reference to PlayerController script
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
     IEnumerator SetupBattle()
@@ -57,10 +61,12 @@ public class CombatSystems : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
+        // Set canMove to false in PlayerController to prevent player movement during battle
+        playerController.canMove = false;
+
         int damageDealt = playerUnit.damage;
 
         bool isDead = enemyUnit.TakeDamage(damageDealt);
-
         enemyHUD.SetHP(enemyUnit.CurrentHP, enemyUnit.maxHP);
 
         dialogueText.text = "The attack is successful, dealing " + damageDealt + " damage!";
@@ -70,13 +76,14 @@ public class CombatSystems : MonoBehaviour
         if (isDead)
         {
             state = BattleState.WON;
-            EndBattle();
         }
         else
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(PerformEnemyTurn());
         }
+
+        EndBattle();
     }
 
     IEnumerator PerformEnemyTurn()
@@ -98,7 +105,6 @@ public class CombatSystems : MonoBehaviour
                 if (isDead)
                 {
                     state = BattleState.LOST;
-                    EndBattle();
                 }
                 else
                 {
@@ -122,10 +128,15 @@ public class CombatSystems : MonoBehaviour
                 PlayerTurn();
             }
         }
+
+        EndBattle();
     }
 
     void EndBattle()
     {
+        // Set canMove to true in PlayerController to allow player movement after battle
+        playerController.canMove = true;
+
         if (state == BattleState.WON)
         {
             dialogueText.text = "You won the battle!";
@@ -143,10 +154,12 @@ public class CombatSystems : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
+        // Set canMove to false in PlayerController to prevent player movement during battle
+        playerController.canMove = false;
+
         int healAmount = 10; // You can adjust the healing amount as needed
 
         playerUnit.Heal(healAmount);
-
         playerHUD.SetHP(playerUnit.CurrentHP, playerUnit.maxHP);
 
         dialogueText.text = "You feel renewed strength! Healed for " + healAmount + " HP.";
@@ -155,17 +168,19 @@ public class CombatSystems : MonoBehaviour
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(PerformEnemyTurn());
+
+        EndBattle();
     }
 
     void Attack(GameObject target, float damage)
     {
         if (target == enemyPrefab)
         {
-            enemyHealth.value -= damage;
+            enemyHealthSlider.value -= damage;
         }
         else
         {
-            playerHealth.value -= damage;
+            playerHealthSlider.value -= damage;
         }
 
         ChangeTurn();
@@ -175,11 +190,11 @@ public class CombatSystems : MonoBehaviour
     {
         if (target == enemyPrefab)
         {
-            enemyHealth.value += amount;
+            enemyHealthSlider.value += amount;
         }
         else
         {
-            playerHealth.value += amount;
+            playerHealthSlider.value += amount;
         }
 
         ChangeTurn();
@@ -199,18 +214,15 @@ public class CombatSystems : MonoBehaviour
     {
         isPlayerTurn = !isPlayerTurn;
 
+        attackBtn.interactable = !attackBtn.interactable;
+        healBtn.interactable = !healBtn.interactable;
+
         if (!isPlayerTurn)
         {
-            attackBtn.interactable = false;
-            healBtn.interactable = false;
-
             StartCoroutine(PerformEnemyTurn());
         }
         else
         {
-            attackBtn.interactable = true;
-            healBtn.interactable = true;
-
             if (state != BattleState.WON && state != BattleState.LOST)
             {
                 state = BattleState.PLAYERTURN;  // Set the state to PLAYERTURN only if the battle is still ongoing

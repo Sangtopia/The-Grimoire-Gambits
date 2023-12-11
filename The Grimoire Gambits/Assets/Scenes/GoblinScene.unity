@@ -292,20 +292,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 413466552}
-        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnHealButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 413466554}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+      - m_Target: {fileID: 413466555}
+        m_TargetAssemblyTypeName: CombatSystems, Assembly-CSharp
         m_MethodName: BtnHeal
         m_Mode: 1
         m_Arguments:
@@ -803,8 +791,8 @@ MonoBehaviour:
   dialogueText: {fileID: 471836211}
   playerHUD: {fileID: 2114952690}
   enemyHUD: {fileID: 802350115}
-  playerHealth: {fileID: 76056774}
-  enemyHealth: {fileID: 1411170397}
+  playerHealthSlider: {fileID: 76056774}
+  enemyHealthSlider: {fileID: 1411170397}
   attackBtn: {fileID: 930771270}
   healBtn: {fileID: 99420958}
 --- !u!1 &439463929
@@ -2045,20 +2033,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 413466552}
-        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 413466554}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+      - m_Target: {fileID: 413466555}
+        m_TargetAssemblyTypeName: CombatSystems, Assembly-CSharp
         m_MethodName: BtnAttack
         m_Mode: 1
         m_Arguments:
