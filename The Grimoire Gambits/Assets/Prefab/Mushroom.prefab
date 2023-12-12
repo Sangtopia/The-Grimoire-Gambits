@@ -31,14 +31,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216483939466320841}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 185.35, y: 0.47, z: 27.95}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1281561175141970859}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &1087400414003916562
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,14 +122,14 @@ MonoBehaviour:
   speed: 2
   chaseRange: 0
   groundDist: 0.5
-  wanderRange: 4
+  wanderRange: 0
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 8946532902896888489}
   sr: {fileID: 1087400414003916562}
   animator: {fileID: 7623111944127683184}
-  player: {fileID: 1049713280932052449, guid: afc7bef7cb917d3478995f0bb2154fbe, type: 3}
+  player: {fileID: 0}
 --- !u!114 &7010825762234205299
 MonoBehaviour:
   m_ObjectHideFlags: 0
