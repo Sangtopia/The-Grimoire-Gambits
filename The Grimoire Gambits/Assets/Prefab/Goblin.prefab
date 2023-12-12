@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  chaseRange: 0
+  chaseRange: 2
   groundDist: 0.4
   wanderRange: 5
   terrainLayer:
