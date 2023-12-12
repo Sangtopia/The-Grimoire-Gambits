@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 459722380262000651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.23, y: 0.85, z: -0.97}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,14 +91,14 @@ MonoBehaviour:
   speed: 2
   chaseRange: 0
   groundDist: 0.4
-  wanderRange: 0
+  wanderRange: 3
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 2436252968832343618}
   sr: {fileID: 4997052139535483650}
   animator: {fileID: 3542372623562936092}
-  player: {fileID: 0}
+  player: {fileID: 1049713280932052449, guid: afc7bef7cb917d3478995f0bb2154fbe, type: 3}
 --- !u!212 &4997052139535483650
 SpriteRenderer:
   m_ObjectHideFlags: 0

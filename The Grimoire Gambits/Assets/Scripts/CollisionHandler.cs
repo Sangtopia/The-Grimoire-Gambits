@@ -11,15 +11,15 @@ public class CollisionHandler : MonoBehaviour
             // Check the tag of the other collider and switch scenes accordingly
             if (gameObject.CompareTag("Goblin"))
             {
-                SwitchScene("Village Battle");
+                SwitchScene("GoblinScene");
             }
             else if (gameObject.CompareTag("Skeleton"))
             {
-                SwitchScene("Dungeon Battle");
+                SwitchScene("SkeletonScene");
             }
             else if (gameObject.CompareTag("Mushroom"))
             {
-                SwitchScene("Forest Battle");
+                SwitchScene("MushroomScene");
             }
         }
     }

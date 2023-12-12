@@ -431,7 +431,6 @@ MonoBehaviour:
   rb: {fileID: 1370536933892537343}
   sr: {fileID: 6003822851319139441}
   animator: {fileID: 6048339477794234947}
-  canMove: 1
 --- !u!135 &7604429746079956052
 SphereCollider:
   m_ObjectHideFlags: 0
