@@ -1,4 +1,4 @@
-### During the making of Grimoire Gambits, we found game design and map building to be relaxing. And coding certain aspects of our game to be a fun challenge, despite some of our shortcomings. We also learned how to create a combat system, something we both never did.
+During the making of Grimoire Gambits, we found game design and map building to be relaxing. And coding certain aspects of our game to be a fun challenge, despite some of our shortcomings. We also learned how to create a combat system, something we both never did.
       
       Khai -Especially for me, since it's my first time working with C# - 
 
