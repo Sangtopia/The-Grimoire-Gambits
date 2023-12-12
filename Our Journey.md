@@ -12,3 +12,7 @@ We hope you enjoyed a snippet of what the game came out to be, and hope what we 
  
 Youtube: 
 https://youtu.be/vTcSjBpw4m4
+
+
+Lots of crashes LOL - Emmanuel
+![Crasged](https://github.com/Sangtopia/The-Grimoire-Gambits/assets/40766915/73c26951-319b-4cdf-b766-d3b8acb708f7)
